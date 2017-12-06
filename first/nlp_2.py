@@ -73,9 +73,6 @@ logits = tf.reshape(
             [batch_size, num_steps, num_classes])
 predictions = tf.nn.softmax(logits)
 
-# Turn our y placeholder into a list of labels
-y_as_list = tf.unstack(y, num=num_steps, axis=1)
-
 #losses and train_step
 losses = tf.nn.sparse_softmax_cross_entropy_with_logits(labels=y, logits=logits)
 total_loss = tf.reduce_mean(losses)

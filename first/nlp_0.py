@@ -127,5 +127,5 @@ def train_network(num_epochs, num_steps, state_size=10, verbose=True):
                     training_loss = 0
 
     return training_losses
-training_losses = train_network(5,num_steps)
+training_losses = train_network(5,num_steps,state_size=state_size)
 print(training_losses)
